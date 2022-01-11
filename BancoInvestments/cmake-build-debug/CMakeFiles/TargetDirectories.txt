@@ -1,3 +1,0 @@
-C:/Users/Win10/Desktop/Algoritmos e estrutura de dados/Projeto final/BancoInvestments/cmake-build-debug/CMakeFiles/BancoHFInvestments.dir
-C:/Users/Win10/Desktop/Algoritmos e estrutura de dados/Projeto final/BancoInvestments/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Win10/Desktop/Algoritmos e estrutura de dados/Projeto final/BancoInvestments/cmake-build-debug/CMakeFiles/rebuild_cache.dir
