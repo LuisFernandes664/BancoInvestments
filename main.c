@@ -1,40 +1,36 @@
 #include <stdio.h>
-#include "clientes.h"
+#include <stdlib.h>
+#include "Banco.h"
 #include "helper.h"
 
-
 int main() {
-
-    Clientes a;
-
+    Banco hf;
+    iniBanco(&hf);
+    read(&hf);
+    Cliente c;
     int opcao;
     do {
-        printf("#### Gestao Alunos ####\n");
-        printf("1 - Criar alunos\n");
-        printf("2 - Listar alunos da turma\n");
-        printf("3 - Procurar aluno da turma\n");
-        printf("4 - Inserir notas\n");
+        printf("#### Gestao Clientes ####\n");
+        printf("1 - Criar cliente\n");
+        printf("2 - Lista de clientes\n");
+        printf("3 - Procurar cliente\n");
         printf("0 - Sair\n");
         printf("Introduza a opcao: ");
         scanf("%d", &opcao);
         limpaBuffer();
-
         switch (opcao) {
             case 1:
-                criarCliente();
-
+                c = criarCliente();
+                acrescentarCliente(&hf, c);
                 break;
             case 2:
-                printCliente(a);
+                listaClientes(hf);
                 break;
             case 3:
-
-                break;
-            case 4:
-
+                menuProcurarCliente(hf);
                 break;
             case 0:
-
+                save(&hf);
                 break;
             default:
                 printf("Opcao Invalida\n");
@@ -42,10 +38,5 @@ int main() {
         }
     } while (opcao != 0);
     //system("PAUSE");
-
-    /*int num = 1;
-    printf("%num", num);
-    num++;
-    printf("%num", num);*/
     return 0;
 }
