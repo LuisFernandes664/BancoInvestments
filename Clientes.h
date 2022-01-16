@@ -15,9 +15,10 @@ typedef struct sCliente{
     int NumIndent;
     int NumPassap;
     int IBAN;
-} Clientes;
+    int NumCliente;
+} Cliente;
 
-Clientes criarCliente();
-void printCliente(Clientes a);
+Cliente criarCliente();
+void printCliente(Cliente a);
 
 #endif //BANCOHFINVESTMENTS_CLIENTES_H

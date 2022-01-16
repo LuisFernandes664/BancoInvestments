@@ -6,8 +6,8 @@
 #include <stdio.h>
 #include <string.h>
 
-Clientes criarCliente(){
-    Clientes a;
+Cliente criarCliente(){
+    Cliente a;
     printf("Introduza o nome: ");
     fgets(a.nome, MAX_NOME -1, stdin);
     a.nome[strlen(a.nome) -1 ] = '\0';
@@ -26,19 +26,24 @@ Clientes criarCliente(){
     scanf("%d", &a.NumIndent);
     printf("Introduza Numero do Passaporte: ");
     scanf("%d", &a.NumPassap);
-    //int num = 1;
-    ////FALTA NUMERO DE CLIENTE
-    //i++;
+
     printf("Introduza IBAN: ");
     scanf("%d", &a.IBAN);
+
+    printf("Introduza Numero de Cliente: ");
+    scanf("%d", &a.NumCliente);
+    //int num = 1;
+    ////FALTA NUMERO DE CLIENTE automatico (ID)
+    //i++;
 }
 
-void printCliente(Clientes a){
+void printCliente(Cliente a){
     printf("##################\n");
     printf("Nome Cliente: %s\n", a.nome);
     printf("Morada cliente: %s\n", a.morada);
     printf("Numero Contribuinte: %d\n", a.NumContrib);
     printf("Numero de Identificacao: %d\n", a.NumIndent);
     printf("Numero de passaporte: %d\n", a.NumPassap);
+    printf("Numero de cliente: %d\n", a.NumCliente);
     printf("##################\n");
 }
