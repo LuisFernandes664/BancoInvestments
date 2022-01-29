@@ -4,6 +4,7 @@
 
 #include "Banco.h"
 #include <stdio.h>
+#include "Clientes.h"
 #include "helper.h"
 
 int acrescentarCliente(Banco *b, Cliente c){
