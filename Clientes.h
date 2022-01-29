@@ -1,9 +1,9 @@
 //
-// Created by Win10 on 04/01/2022.
+// Created by Win10 on 29/01/2022.
 //
 
-#ifndef BANCOHFINVESTMENTS_CLIENTES_H
-#define BANCOHFINVESTMENTS_CLIENTES_H
+#ifndef BANCOINVESTMENTS_CLIENTES_H
+#define BANCOINVESTMENTS_CLIENTES_H
 
 #define MAX_NOME 50
 #define MAX_MORADA 100
@@ -19,6 +19,6 @@ typedef struct sCliente{
 } Cliente;
 
 Cliente criarCliente();
-void printCliente(Cliente a);
+void printCliente(Cliente c);
 
-#endif //BANCOHFINVESTMENTS_CLIENTES_H
+#endif //BANCOINVESTMENTS_CLIENTES_H

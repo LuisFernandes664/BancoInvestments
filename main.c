@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "Banco.h"
 #include "helper.h"
+#include "login.h"
+#include "clientes.h"
 
 int main() {
     Banco hf;

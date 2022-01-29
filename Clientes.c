@@ -1,5 +1,5 @@
 //
-// Created by Win10 on 04/01/2022.
+// Created by Win10 on 29/01/2022.
 //
 
 #include "Clientes.h"
@@ -7,34 +7,31 @@
 #include <string.h>
 
 Cliente criarCliente(){
-    Cliente a;
+    Cliente c;
     printf("Introduza o nome: ");
-    fgets(a.nome, MAX_NOME -1, stdin);
-    a.nome[strlen(a.nome) -1 ] = '\0';
+    fgets(c.nome, MAX_NOME -1, stdin);
+    c.nome[strlen(c.nome) -1 ] = '\0';
 
 
     printf("Introduza a morada: ");
-    fgets(a.morada, MAX_MORADA -1, stdin);
-    a.morada[strlen(a.morada) -1 ] = '\0';
+    fgets(c.morada, MAX_MORADA -1, stdin);
+    c.morada[strlen(c.morada) -1 ] = '\0';
 
 
     printf("Introduza Numero de Contribuinte: ");
-    scanf("%d", &a.NumContrib);
+    scanf("%d", &c.NumContrib);
     //VER - LIMITAR TAMANHO DE NUMCONTRIB///a.NumContrib[strlen(a.NumContrib) -1 ] = '\0';
 
     printf("Introduza o CC: ");
-    scanf("%d", &a.NumIndent);
+    scanf("%d", &c.NumIndent);
     printf("Introduza Numero do Passaporte: ");
-    scanf("%d", &a.NumPassap);
+    scanf("%d", &c.NumPassap);
 
     printf("Introduza IBAN: ");
-    scanf("%d", &a.IBAN);
+    scanf("%d", &c.IBAN);
 
     printf("Introduza Numero de Cliente: ");
-    scanf("%d", &a.NumCliente);
-    //int num = 1;
-    ////FALTA NUMERO DE CLIENTE automatico (ID)
-    //i++;
+    scanf("%d", &c.NumCliente);
 }
 
 void printCliente(Cliente a){

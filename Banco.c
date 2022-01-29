@@ -1,5 +1,5 @@
 //
-// Created by João Raminhos on 11/01/2022.
+// Created by Win10 on 29/01/2022.
 //
 
 #include "Banco.h"
@@ -34,7 +34,7 @@ int procurarCliente(Banco b){
     scanf("%d", &numero);
     limpaBuffer();
     for (int i = 0; i < b.qtClientes; i++) {
-        if(b.clientes == NumCliente){
+        if(b.clientes == numero){//NumCliente
             return i;
         }
     }
@@ -51,7 +51,7 @@ void menuProcurarCliente(Banco b){
 }
 
 void save(Banco *b){
-    FILE * file = fopen("Banco.bin", "bhf+");
+    FILE * file = fopen("Banco.bin", "wb+");
     if(file  ==NULL || b == NULL){
         return;
     }
@@ -60,7 +60,7 @@ void save(Banco *b){
 }
 
 void read(Banco * b){
-    FILE *file = fopen("Banco.bin", "bhf+");
+    FILE *file = fopen("Banco.bin", "rb+");
     if(file == NULL){
         return;
     }
