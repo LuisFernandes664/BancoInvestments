@@ -16,6 +16,7 @@ Carteira CriarCarteiras(){
 
     printf("Introduza numero da carteira: ");
     scanf("%d", &a.idcarteira);
+
 }
 
 void printCarteiras(Carteiras a){
