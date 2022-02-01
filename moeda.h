@@ -10,8 +10,9 @@
 
 typedef struct sMoeda{
     int idMoeda;
-    int descritivo [MAX_MOEDA];
-    int seuValor [MAX_VALOR];
+    char descritivo [MAX_MOEDA];
+    int seuValor;
+    //int quantidadaMoeda[50];
     //int ativo;
 } Moeda;
 
@@ -20,7 +21,7 @@ typedef struct sListmoedas{
     int tamanho;
 } ListMoedas;
 
-ListMoedas listMoedas;
+//ListMoedas listMoedas;
 
 void addMoedaList(Moeda m);
 Moeda criarMoeda();
@@ -28,5 +29,9 @@ void ComecaListMoedas();
 void printMoeda(Moeda m);
 void inserirMoedas(Moeda * m);
 void printValores(Moeda m);
+void saveMoedasList();
+void saveMoedasList();
+void readMoedaList();
+void listAllMoedas();
 
 #endif //BANCOINVESTMENTS_MOEDA_H

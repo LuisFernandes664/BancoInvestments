@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Win10/Desktop/Algoritmos e estrutura de dados/Projeto final/novo29012022/BancoInvestments
+# Install script for directory: C:/Users/Win10/Desktop/Algoritmos e estrutura de dados/Projeto final/last/BancoInvestments-main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Win10/Desktop/Algoritmos e estrutura de dados/Projeto final/novo29012022/BancoInvestments/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Win10/Desktop/Algoritmos e estrutura de dados/Projeto final/last/BancoInvestments-main/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

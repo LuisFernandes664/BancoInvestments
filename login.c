@@ -1,16 +1,19 @@
 //
 // Created by Win10 on 29/01/2022.
 //
-
-#include "login.h"
-#include "Clientes.h"
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
+#include "login.h"
+#include "Clientes.h"
+
+
+UserList userList;
+
 
 void addToList(User user) {
     userList.user[userList.tam++] = user;
 }
+
 
 void readUserList() {
     FILE *file = fopen("users.bin", "rb+");
@@ -55,7 +58,12 @@ void createNewUser() {
     if (user.type == Manager) {
         user.clientId = -1;
     } else {
-        user.clientId = criarCliente();
+        //Cliente d = criarCliente();
+        //user.clientId = d.NumCliente;
+        printf("Introduzir o client id:");
+        scanf("%d", &user.clientId);
+        printf("Client id: %d\n",user.clientId);
+
     }
 
     addToList(user);
@@ -78,7 +86,8 @@ void saveUserList() {
 }
 
 int validateLogin(char *username, char *password) {
-    for (int i = 0; i < userList.tam; i++) {
+    int i;
+    for (i = 0; i < userList.tam; i++) {
         if (strcmp(userList.user[i].username, username) == 0
             && strcmp(userList.user[i].password, password) == 0) {
             return userList.user[i].type;
@@ -98,14 +107,16 @@ void printUser(User user) {
 }
 
 void listAllUsers() {
-    for (int i = 0; i < userList.tam; i++) {
+    int i;
+    for (i = 0; i < userList.tam; i++) {
         printUser(userList.user[i]);
     }
 }
 
 void deleteUser(char *username) {
     int userFound = 0;
-    for (int i = 0; i < userList.tam; i++) {
+    int i;
+    for (i = 0; i < userList.tam; i++) {
         if (userFound == 1) { //depois de encontrar o utilizador, todos os outros devem recuar uma posição
             userList.user[i - 1] = userList.user[i];
         } else {
@@ -120,7 +131,8 @@ void deleteUser(char *username) {
 }
 
 User* findUser(char *username) {
-    for (int i = 0; i < userList.tam; i++) {
+    int i;
+    for (i = 0; i < userList.tam; i++) {
         if (strcmp(userList.user[i].username, username) == 0) {
             return &userList.user[i];
         }

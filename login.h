@@ -10,7 +10,7 @@
 #define MAX_PASSWORD 100
 #define MAX_USERS 200
 
-typedef enum eUserType {Clientes =1, Manager =2} UserType;
+typedef enum eUserType {Clientes = 1 , Manager =2} UserType;
 
 typedef struct sUser{
     char username[MAX_USERNAME];
@@ -24,7 +24,7 @@ typedef struct sUserList{
     int tam;
 } UserList;
 
-UserList userList;
+//UserList userList;
 void createNewUser();
 void initUserList();
 int validateLogin(char* username, char* password);
